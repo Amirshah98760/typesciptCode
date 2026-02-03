@@ -246,3 +246,163 @@ for (var _a = 0, mixArray_1 = mixArray; _a < mixArray_1.length; _a++) {
     var element = mixArray_1[_a];
     console.log(element);
 }
+// Create an object product with:
+// id (number)
+// name (string)
+// price (number)
+// Write a function that prints product details.
+var obj = {
+    id: 1,
+    name: 'Apple',
+    price: 200
+};
+function printProducts() {
+    console.log("Product ID: ".concat(obj.id, ", Product Name: ").concat(obj.name, ", Product Price: ").concat(obj.price));
+}
+printProducts();
+// Create a function that accepts an array of string | number and returns only strings.
+// Method 1
+// var mixArr: (string | number)[] = [1,2,'khan', 4,5, 'amir', 'shah', 'from pakistan'];
+// function checkArr(){
+//        mixArr.forEach((ele)=>{
+//         if (typeof ele === 'string') {
+//            console.log(ele)
+//         }
+//     })
+// }
+// checkArr();
+// Method 2
+// function filterStrings(arr: (string | number)[]): string[] {
+//     return arr.filter((item): item is string => typeof item === 'string');
+// }
+// var mixArr: (string | number)[] = [1,2,'khan', 4,5, 'amir', 'shah', 'from pakistan'];
+// var stringArr = filterStrings(mixArr);
+// console.log(stringArr);
+// function filterStrings(arr:(string | number )[]):string[]{
+//     return arr.filter((ele)=> typeof ele === 'string');
+// }
+// var mixArr: (string | number)[] = [1,2,'khan', 4,5, 'amir', 'shah', 'from kpk pakistan'];
+// var stringArr = filterStrings(mixArr);
+// console.log(stringArr);
+function filString(arr) {
+    return arr.filter(function (ele) { return typeof ele === 'string'; });
+}
+var mixArr = [1, 2, 'khan', 4, 5, 'amir', 'shah', 'from pakistan'];
+var strArr = filString(mixArr);
+console.log(strArr);
+// Declare an object user with:
+// id (number)
+// name (string | null)
+// Write a function that safely prints the user name.
+var obj1 = {
+    id: 1,
+    name: null
+};
+function objFunction() {
+    if (obj1.name === null) {
+        console.log("hello");
+    }
+    else {
+        console.log(obj1.name);
+    }
+}
+objFunction();
+// Create an array of objects where each object has:
+// title (string)
+// status ("active" | "inactive")
+// Filter only the active items.
+// type Status1 = 'active' | 'inactive ';
+// var objArray: {title:string, status:Status1}[]= 
+// [{
+//     title:'Item 1',
+//     status:'active'
+// },
+// {
+//     title:'Item 2',
+//     status:'inactive '
+// },  
+// {
+//     title:'Item 3',
+//     status:'active'
+// }]
+// var activeItems = objArray.filter((item) => item.status === 'active');
+// console.log(activeItems);
+// Level 1 – Strengthen Basics
+// Declare a variable score that can be number | null.
+// Write a function that returns "No score" if null, otherwise returns the score.
+var score = null;
+function checkScore(score) {
+    if (score === null) {
+        console.log('No Score');
+    }
+    else {
+        console.log(score);
+    }
+}
+checkScore(score);
+// Create a function that takes two parameters:
+// name (string)
+// age (number | string)
+// Print a formatted message.
+function stdData(name, age) {
+    console.log("My Name is ".concat(name, " and i am ").concat(age, " years old"));
+}
+stdData('sohail shah', 25);
+// Create an array of numbers and return the largest number.
+// var numArray1: number[] = [10,20,30,40,50,100,5];
+// var largestNum = Math.max(...numArray1);
+// console.log(largestNum);
+// 🟡 Level 2 – Union + Arrays
+// Create a function that takes an array of number | null and returns only valid numbers.
+function filterNumbers(arr) {
+    return arr.filter(function (item) { return item !== null; });
+}
+var mixedArray = [10, null, 20, 30, null, 40];
+var validNumbers = filterNumbers(mixedArray);
+console.log(validNumbers);
+// Declare an array that can store only strings.
+// Try pushing a number and observe the TypeScript error.
+var stringOnlyArray = [];
+var pushString = stringOnlyArray.push('Amir shah');
+// var pushNumber = stringOnlyArray.push(100); // This will cause a TypeScript error
+console.log(stringOnlyArray);
+// Create a function that accepts an array of string | number and returns the count of numbers.
+// function countNumbers(arr: (string | number)[]): number {
+//     return arr.filter((item) => typeof item === 'number').length;
+// }
+// var mixedArr: (string | number)[] = ['amir', 20, 'shah', 30, 'khan', 40];
+// var numberCount = countNumbers(mixedArr);
+// console.log(numberCount);
+// Create an object student with:
+// id (number)
+// name (string)
+// marks (number | null)
+// Write a function that prints "Marks not available" if null.
+var student = {
+    id: 2,
+    stdName: 'Daud shah',
+    marks: null
+};
+function checkMarks() {
+    if (student.marks === null) {
+        console.log('Marks not available');
+    }
+    else {
+        console.log(student);
+    }
+}
+checkMarks();
+// Create a function that accepts an object with:
+// title (string)
+// price (number | "free")
+// Print different messages based on price type.
+function printProductDetails(product) {
+    if (product.price === 'free') {
+        console.log("The product ".concat(product.title, " is free of cost."));
+    }
+    else {
+        console.log("The product ".concat(product.title, " costs $ ").concat(product.price, "."));
+    }
+}
+printProductDetails({ title: 'Book', price: 'free' });
+printProductDetails({ title: 'Laptop', price: 999 });
