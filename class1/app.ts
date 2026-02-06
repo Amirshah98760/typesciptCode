@@ -582,3 +582,167 @@ function printProductDetails(product: {title:string, price:number | 'free'}){
 
 printProductDetails({title:'Book', price: 'free'});
 printProductDetails({title:'Laptop', price: 999});
+
+
+var arr5:string[] = ['Amir', 'shah', 'is', 'a', 'good'];
+
+arr5.push('Developer');
+
+console.log(arr5);
+
+
+var arrofObjects: {id:number, name:string}[] = 
+[
+    {
+        id:1, 
+        name:'Amir shah'
+    },
+
+    {
+        id:2,
+        name:'Sohail khan'
+    },
+    {
+        id:3,
+        name:'Daud shah'
+    }
+];
+
+for (const element of arrofObjects) {
+    console.log(`ID: ${element.id}, Name: ${element.name}`);
+}
+
+
+// Create an array of strings and print the last element.
+
+// var fruits:string[] = ['mango ', 'banana', 'pineapple ', 'apple', 'grapes', 'ananas'];
+
+// var lastElement = fruits[fruits.length - 1];
+// console.log(`Last Element of array  ${lastElement}`);
+
+
+var fruits:string[] = ['mango ', 'banana', 'pineapple ', 'apple', 'grapes', 'ananas'];
+var lastEle = fruits[fruits.length -1 ];
+console.log(lastEle);
+
+// Create a tuple that stores: id (number), username (string).
+var userTuple: [number, string] = [1, 'Huzaifa khan'];
+console.log(`User ID: ${userTuple[0]} and User name is ${userTuple[1]}`);
+
+
+// Write a function that takes a number array and returns the average.
+
+// function calculateAverage(arr: number[]): number {
+//     const sum = arr.reduce((acc, curr) => acc + curr, 0);
+//     return sum / arr.length;
+// }
+
+// var numbersArray: number[] = [10, 20, 30, 40, 50];
+// var average = calculateAverage(numbersArray);
+// console.log(`Average is: ${average}`);
+
+
+function calculateAverage(arr:number[]): number{
+    const sum = arr.reduce((acc, currentValue) => acc + currentValue , 0);
+    return sum / arr.length;
+}
+
+var numbersArray: number[] = [40,20,80,90,50];
+var average = calculateAverage(numbersArray);
+console.log(`Average is : ${average}`);
+
+
+// function findAverageofArray(arr:number[]): number{
+//    const sum = arr.reduce((acc , curr)=> acc + curr, 0);
+//    return sum / arr.length;
+// }
+
+// var numArray: number[] = [10,20,30,40,50];
+// var average = findAverageofArray(numArray);
+// console.log(`Average is : ${average}`);
+
+
+// Create a variable value that can be string | number.
+// If number → add 10
+// If string → add "!" at the end
+
+var value: number | string = 50;
+
+if (typeof value === 'number') {
+    value += 10;
+    console.log(value);
+}
+else if (typeof value === 'string'){
+    value = value + '!';
+    console.log(value);
+}
+
+var value1: number | string = 'hello how are you';
+
+if (typeof value1 === 'number') {
+     value1 = value1 +  10;
+    console.log(value1);
+}
+else if (typeof value1 === 'string'){
+    value1 = value1 + '!';
+    console.log(value1);
+}
+
+
+// Create a function that takes (string | number)[] and returns only strings.
+
+function getStrings(arr: (string | number)[]): string[] {
+    return arr.filter( (item ) => typeof item === 'string') as string[];
+}
+
+var mixedArr1: (string | number)[] = [10, 'amir', 20, 'shah', 30, 'khan'];
+var stringArr1 = getStrings(mixedArr1);
+console.log(stringArr1);
+
+
+//Array in Typescript 
+
+var myNumArray: number[] = [60, 40 ,45, 43, 50];
+console.log(myNumArray);
+
+// var strArray1: string[] = ["Pakisatan", 'is a ', 'beautiful','country'];
+
+// for (const ele of strArray1) {
+//     console.log(ele);
+// }
+
+
+// Second method of string array declaration 
+var strArray2: Array<string> = ['khan', 'shahzaib', 'nouman', 'junaid'];
+
+for (const element of strArray2) {
+    console.log(element.toUpperCase());
+}
+
+
+var arrayofStrings: Array<string> = ['suleman', 'umer', 'saifullah', 'ismail'];
+arrayofStrings.push('huzaifa');
+for (const data of arrayofStrings) {
+    console.log(data);
+}
+
+
+// Readonly array 
+var readOnlyArray: ReadonlyArray<number> = [10,20,30,40,50];
+// readOnlyArray.push(60); // This will cause an error because it's a readonly array
+console.log(readOnlyArray);
+
+
+// Typescript tuple 
+var username: [number , string , boolean] = [1, 'amir shah', true];
+
+
+var userData :{name:string , rollNo:number, isActive:boolean} = {
+    name:'Amir shah',
+    rollNo:439,
+    isActive:true
+}
+
+console.log(userData.name);
+console.log(userData.rollNo);
+console.log(userData.isActive);

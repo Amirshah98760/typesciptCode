@@ -406,3 +406,117 @@ function printProductDetails(product) {
 }
 printProductDetails({ title: 'Book', price: 'free' });
 printProductDetails({ title: 'Laptop', price: 999 });
+var arr5 = ['Amir', 'shah', 'is', 'a', 'good'];
+arr5.push('Developer');
+console.log(arr5);
+var arrofObjects = [
+    {
+        id: 1,
+        name: 'Amir shah'
+    },
+    {
+        id: 2,
+        name: 'Sohail khan'
+    },
+    {
+        id: 3,
+        name: 'Daud shah'
+    }
+];
+for (var _b = 0, arrofObjects_1 = arrofObjects; _b < arrofObjects_1.length; _b++) {
+    var element = arrofObjects_1[_b];
+    console.log("ID: ".concat(element.id, ", Name: ").concat(element.name));
+}
+// Create an array of strings and print the last element.
+// var fruits:string[] = ['mango ', 'banana', 'pineapple ', 'apple', 'grapes', 'ananas'];
+// var lastElement = fruits[fruits.length - 1];
+// console.log(`Last Element of array  ${lastElement}`);
+var fruits = ['mango ', 'banana', 'pineapple ', 'apple', 'grapes', 'ananas'];
+var lastEle = fruits[fruits.length - 1];
+console.log(lastEle);
+// Create a tuple that stores: id (number), username (string).
+var userTuple = [1, 'Huzaifa khan'];
+console.log("User ID: ".concat(userTuple[0], " and User name is ").concat(userTuple[1]));
+// Write a function that takes a number array and returns the average.
+// function calculateAverage(arr: number[]): number {
+//     const sum = arr.reduce((acc, curr) => acc + curr, 0);
+//     return sum / arr.length;
+// }
+// var numbersArray: number[] = [10, 20, 30, 40, 50];
+// var average = calculateAverage(numbersArray);
+// console.log(`Average is: ${average}`);
+function calculateAverage(arr) {
+    var sum = arr.reduce(function (acc, currentValue) { return acc + currentValue; }, 0);
+    return sum / arr.length;
+}
+var numbersArray = [40, 20, 80, 90, 50];
+var average = calculateAverage(numbersArray);
+console.log("Average is : ".concat(average));
+// function findAverageofArray(arr:number[]): number{
+//    const sum = arr.reduce((acc , curr)=> acc + curr, 0);
+//    return sum / arr.length;
+// }
+// var numArray: number[] = [10,20,30,40,50];
+// var average = findAverageofArray(numArray);
+// console.log(`Average is : ${average}`);
+// Create a variable value that can be string | number.
+// If number → add 10
+// If string → add "!" at the end
+var value = 50;
+if (typeof value === 'number') {
+    value += 10;
+    console.log(value);
+}
+else if (typeof value === 'string') {
+    value = value + '!';
+    console.log(value);
+}
+var value1 = 'hello how are you';
+if (typeof value1 === 'number') {
+    value1 = value1 + 10;
+    console.log(value1);
+}
+else if (typeof value1 === 'string') {
+    value1 = value1 + '!';
+    console.log(value1);
+}
+// Create a function that takes (string | number)[] and returns only strings.
+function getStrings(arr) {
+    return arr.filter(function (item) { return typeof item === 'string'; });
+}
+var mixedArr1 = [10, 'amir', 20, 'shah', 30, 'khan'];
+var stringArr1 = getStrings(mixedArr1);
+console.log(stringArr1);
+//Array in Typescript 
+var myNumArray = [60, 40, 45, 43, 50];
+console.log(myNumArray);
+// var strArray1: string[] = ["Pakisatan", 'is a ', 'beautiful','country'];
+// for (const ele of strArray1) {
+//     console.log(ele);
+// }
+// Second method of string array declaration 
+var strArray2 = ['khan', 'shahzaib', 'nouman', 'junaid'];
+for (var _c = 0, strArray2_1 = strArray2; _c < strArray2_1.length; _c++) {
+    var element = strArray2_1[_c];
+    console.log(element.toUpperCase());
+}
+var arrayofStrings = ['suleman', 'umer', 'saifullah', 'ismail'];
+arrayofStrings.push('huzaifa');
+for (var _d = 0, arrayofStrings_1 = arrayofStrings; _d < arrayofStrings_1.length; _d++) {
+    var data_1 = arrayofStrings_1[_d];
+    console.log(data_1);
+}
+// Readonly array 
+var readOnlyArray = [10, 20, 30, 40, 50];
+// readOnlyArray.push(60); // This will cause an error because it's a readonly array
+console.log(readOnlyArray);
+// Typescript tuple 
+var username = [1, 'amir shah', true];
+var userData = {
+    name: 'Amir shah',
+    rollNo: 439,
+    isActive: true
+};
+console.log(userData.name);
+console.log(userData.rollNo);
+console.log(userData.isActive);
