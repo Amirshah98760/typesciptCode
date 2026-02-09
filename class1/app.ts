@@ -928,14 +928,42 @@ console.log(result1);
 
 
 
-function totalPrice(item:number , price:number, text?:string)  {
-    var total = item * price;
-    if (text) {
-        return text + total;
-    }
-    return total;
+// function totalPrice3(item:number , price:number, text?:string)  {
+//     var total = item * price;
+//     if (text) {
+//         return text + total;
+//     }
+//     return total;
 
+// }
+
+// var totalPrice1 = totalPrice3(20, 50);
+// console.log(totalPrice1);
+
+
+
+// Interface in Typescript
+interface User {
+    id: number;
+    name: string;
+    email: string;
+    isActive: boolean;
 }
 
-var totalPrice1 = totalPrice(20, 50);
-console.log(totalPrice1);
+var user1: User = {
+    id: 1,
+    name: 'Amir shah',
+    email: 'amirshah960@gmail.com',
+    isActive: true
+}
+
+console.log(user1);
+
+
+var user2: User = {
+    id:2, 
+    name:'Sohail khan',
+    email:'example@gmail.com',
+    isActive:false
+}
+console.log(user2);
