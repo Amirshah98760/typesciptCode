@@ -645,3 +645,12 @@ function check(name) {
 }
 var result1 = check('Amir shah');
 console.log(result1);
+function totalPrice(item, price, text) {
+    var total = item * price;
+    if (text) {
+        return text + total;
+    }
+    return total;
+}
+var totalPrice1 = totalPrice(20, 50);
+console.log(totalPrice1);
