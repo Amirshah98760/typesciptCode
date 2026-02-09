@@ -659,3 +659,31 @@ var user2 = {
     isActive: false
 };
 console.log(user2);
+var product1 = {
+    id: 1,
+    name: 'Laptop',
+    price: 999.99,
+    description: 'A high-performance laptop for work and gaming.'
+};
+console.log(product1);
+var product2 = {
+    id: 2,
+    name: 'Smartphone',
+    price: 499.99,
+    description: 'A sleek smartphone with a powerful camera and long battery life.'
+};
+console.log(product2);
+var std1 = {
+    id: 1,
+    name: 'Amir shah',
+    fName: 'Sultan shah',
+    address: 'Peshawar'
+};
+console.log(std1);
+var std2 = {
+    id: 2,
+    name: 'Saif ullah',
+    fName: 'Muhammad Jamal',
+    address: 'Peshawar Pakistan'
+};
+console.log(std2);

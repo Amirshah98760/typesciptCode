@@ -9,9 +9,9 @@ console.log(str);
 var num1: number = 20;
 var num2: number = 30;
 // var num3 = '20';
-var total:number = num1 + num2;
+var total: number = num1 + num2;
 console.log("Total is: " + total);
-var num : number = 42;
+var num: number = 42;
 console.log(num);
 
 
@@ -27,7 +27,7 @@ console.log(i);
 //     age: 25
 // }
 
-let id : number | string = '12345'; //if you want to assign multiple types to a variable
+let id: number | string = '12345'; //if you want to assign multiple types to a variable
 console.log(id);
 
 id = 67890;
@@ -43,7 +43,7 @@ var numb = '20';
 
 
 // Number Array 
-var numArray: number[] = [10,20,30,40,50];
+var numArray: number[] = [10, 20, 30, 40, 50];
 
 // for (let i = 0; i < numArray.length; i++) {
 //     console.log(numArray[i])
@@ -55,7 +55,7 @@ var numArray: number[] = [10,20,30,40,50];
 
 
 
-let strArray : string[] = ['Amir', 'Shah', 'is', 'a', 'good', 'boy'];
+let strArray: string[] = ['Amir', 'Shah', 'is', 'a', 'good', 'boy'];
 
 
 for (const element of strArray) {
@@ -63,7 +63,7 @@ for (const element of strArray) {
 }
 
 
-let anytypeofData : any = 100;
+let anytypeofData: any = 100;
 anytypeofData = "Now I'm a string";
 anytypeofData = true;
 // anytypeofData = {name: 'Amir shah', age: 25};
@@ -73,15 +73,15 @@ console.log(anytypeofData);
 // }
 
 
-var number : number | string = 20;    //Union Type
+var number: number | string = 20;    //Union Type
 console.log(number)
 number = 'Twenty';
 console.log(number);
 
-var item:boolean = true;
+var item: boolean = true;
 // console.log(item)
 
-if(item){
+if (item) {
     console.log('The item value is true')
 }
 else {
@@ -105,14 +105,14 @@ console.log(n);
 // 1️⃣ Number
 // Declare a variable age as a number and assign your age to it.
 
-var age:number = 25;
+var age: number = 25;
 console.log(`I am  ${age} Years old`)
 // Create a function that takes two numbers and returns their sum.
-function add(a:number , b: number){
+function add(a: number, b: number) {
     return a + b;
 }
 
-var callFunc = add(20,230);
+var callFunc = add(20, 230);
 console.log(`a  + b = ${callFunc}`)
 
 
@@ -121,7 +121,7 @@ console.log(`a  + b = ${callFunc}`)
 var userName: string = 'Amir shah';
 console.log(`Hello ${userName}`)
 // Create a function that takes a string and returns its length.
-function strLength(a:string, b:string){
+function strLength(a: string, b: string) {
     return a.length + b.length;
 
 }
@@ -141,13 +141,13 @@ console.log(result)
 
 // 4️⃣ Any
 // Create a variable data of type any. Assign a string, then a number, then a boolean to it.
-var data:any = 'String value';
+var data: any = 'String value';
 data = 200;
 data = true;
 
 // Create a function that takes any type parameter and prints it.
-function anyData(a:any){
-console.log(a);
+function anyData(a: any) {
+    console.log(a);
 }
 
 anyData('My Name is Amir shah ');
@@ -157,12 +157,12 @@ anyData(500);
 
 // 5️⃣ Union
 // Declare a variable id that can be either string or number. Assign both types to it in different lines.
-var id1:string | number;
+var id1: string | number;
 id1 = 20;
 id1 = 'Hello world ';
 
 // Create a function that takes a string | number parameter and returns its string representation.
-function unionData(a:string | number){
+function unionData(a: string | number) {
     return a.toString();
 }
 
@@ -174,7 +174,7 @@ console.log(strData);
 
 // 6️⃣ Array
 // Create an array of numbers [1, 2, 3, 4]. Add one more number using push().
-var arr1: number[] = [10,20,30,40];
+var arr1: number[] = [10, 20, 30, 40];
 arr1.push(50);
 console.log(arr1);
 // console.log(arr1[0]);
@@ -198,9 +198,9 @@ console.log(arr1);
 
 // 7️⃣ Object
 // Declare an object person with properties name (string) and age (number). Print name and age.
-let persons: {fullName:string, age:number }= {
-fullName : 'Sohail khan',
-age: 20
+let persons: { fullName: string, age: number } = {
+    fullName: 'Sohail khan',
+    age: 20
 }
 
 console.log(persons.fullName);
@@ -226,12 +226,12 @@ console.log(age);
 
 
 
-function printNumbers( arr: (string | number )[]){
-    arr.filter( (element) => {
+function printNumbers(arr: (string | number)[]) {
+    arr.filter((element) => {
         if (typeof element === 'string') {
-        console.log(element);
-    }   
-})
+            console.log(element);
+        }
+    })
 
 }
 
@@ -241,11 +241,11 @@ printNumbers([10, 'amir', 20, 'shah', 30, 'khan']);
 
 // 2️⃣ Variable that can be string | null and handling both cases
 var maybeName: string | null = 'Amir '
-function greet (name: string | null){
+function greet(name: string | null) {
     if (name === null) {
         console.log('Hello , Guest!')
     }
-    else{
+    else {
         console.log(`Hello ${name}`);
     }
 }
@@ -272,17 +272,17 @@ greet(maybeName);
 
 type Status = 'active ' | 'inactive ';
 
-var user: {id:number , name:string, status:Status} = {
-   
-   id:1,
-name:'Amir shah',
-status:'active '
+var user: { id: number, name: string, status: Status } = {
+
+    id: 1,
+    name: 'Amir shah',
+    status: 'active '
 
 }
 
 console.log(user)
 user.status = 'inactive ';
-console.log(user )
+console.log(user)
 
 
 // 🟢 Level 1 – Basics
@@ -296,23 +296,23 @@ price = 'Free';
 console.log(price)
 
 // Create a function that takes a string and returns true if its length is greater than 5, otherwise false.
-function findLength(s:string){
- if (s.length > 5 ) {
-    return true;
- }
- else{
-    return false;
- }
+function findLength(s: string) {
+    if (s.length > 5) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 console.log(findLength('amir shah'));
 // Create an array of numbers and calculate the sum of all elements.
-var arr3:number[] = [20,30,40,50,100];
+var arr3: number[] = [20, 30, 40, 50, 100];
 var calculateArr = 0;
 for (let index = 0; index < arr3.length; index++) {
     const element = arr3[index];
     calculateArr += element;
-    
+
 }
 
 console.log(calculateArr)
@@ -322,13 +322,13 @@ console.log(calculateArr)
 // Declare a variable email that can be string | null.
 // Write a function that prints "No email provided" if it is null.
 
-var email : string | null = null;
+var email: string | null = null;
 
-function printEmail(email:string | null){
-    if (email === null ) {
+function printEmail(email: string | null) {
+    if (email === null) {
         console.log('NO Email Provided ')
     }
-    else{
+    else {
         console.log('email', email);
     }
 }
@@ -339,24 +339,24 @@ printEmail(email);
 // If number → multiply by 2
 // If string → convert to uppercase
 
-function checkNum(a:number | string){
-   if (typeof a === 'number') {
-    console.log(a * 2)
-   }
-   else if (typeof a === 'string'){
-    var covnertedToUperrcase = a.toUpperCase();
-    console.log(covnertedToUperrcase)
-   }
-   
-  }
+function checkNum(a: number | string) {
+    if (typeof a === 'number') {
+        console.log(a * 2)
+    }
+    else if (typeof a === 'string') {
+        var covnertedToUperrcase = a.toUpperCase();
+        console.log(covnertedToUperrcase)
+    }
 
-  checkNum('amir shah');
+}
+
+checkNum('amir shah');
 
 
 //  Create an array that can contain only strings or numbers.
 // Loop and print each element.
-  
-var mixArray: (number | string)[] = [1,'khan', 20, 2, 'shah'];
+
+var mixArray: (number | string)[] = [1, 'khan', 20, 2, 'shah'];
 
 for (const element of mixArray) {
     console.log(element)
@@ -369,15 +369,15 @@ for (const element of mixArray) {
 // price (number)
 // Write a function that prints product details.
 
-var obj: {id:number, name:string , price:number} ={
-    id:1,
-    name:'Apple',
-    price:200
-    
+var obj: { id: number, name: string, price: number } = {
+    id: 1,
+    name: 'Apple',
+    price: 200
+
 }
 
-function printProducts(){
-   console.log(`Product ID: ${obj.id}, Product Name: ${obj.name}, Product Price: ${obj.price}`)
+function printProducts() {
+    console.log(`Product ID: ${obj.id}, Product Name: ${obj.name}, Product Price: ${obj.price}`)
 }
 
 
@@ -412,8 +412,8 @@ printProducts();
 // function filterStrings(arr:(string | number )[]):string[]{
 //     return arr.filter((ele)=> typeof ele === 'string');
 // }
- 
- 
+
+
 // var mixArr: (string | number)[] = [1,2,'khan', 4,5, 'amir', 'shah', 'from kpk pakistan'];
 
 // var stringArr = filterStrings(mixArr);
@@ -421,12 +421,12 @@ printProducts();
 
 
 
-function filString(arr:(string | number )[]): string[]{
-    return arr.filter((ele)=> typeof ele === 'string');
-    
+function filString(arr: (string | number)[]): string[] {
+    return arr.filter((ele) => typeof ele === 'string');
+
 }
 
-var mixArr: (string | number)[] = [1,2,'khan', 4,5, 'amir', 'shah', 'from pakistan'];
+var mixArr: (string | number)[] = [1, 2, 'khan', 4, 5, 'amir', 'shah', 'from pakistan'];
 var strArr = filString(mixArr);
 console.log(strArr);
 
@@ -436,13 +436,13 @@ console.log(strArr);
 // name (string | null)
 // Write a function that safely prints the user name.
 
-var obj1: {id:number , name:(string | null)} = {
-    id:1,
-    name:null
+var obj1: { id: number, name: (string | null) } = {
+    id: 1,
+    name: null
 }
 
-function objFunction(){
-    if(obj1.name === null){
+function objFunction() {
+    if (obj1.name === null) {
         console.log("hello")
     }
     else {
@@ -484,11 +484,11 @@ objFunction();
 // Write a function that returns "No score" if null, otherwise returns the score.
 
 var score: number | null = null;
-function  checkScore(score) {
+function checkScore(score) {
     if (score === null) {
         console.log('No Score')
     }
-    else{
+    else {
         console.log(score)
     }
 }
@@ -500,7 +500,7 @@ checkScore(score)
 // age (number | string)
 // Print a formatted message.
 
-function stdData(name:string , age:number |string){
+function stdData(name: string, age: number | string) {
     console.log(`My Name is ${name} and i am ${age} years old`)
 }
 stdData('sohail shah', 25)
@@ -515,7 +515,7 @@ stdData('sohail shah', 25)
 // 🟡 Level 2 – Union + Arrays
 // Create a function that takes an array of number | null and returns only valid numbers.
 function filterNumbers(arr: (number | null)[]): number[] {
-    return arr.filter((item)=> item !== null) as number[];
+    return arr.filter((item) => item !== null) as number[];
 
 }
 
@@ -548,17 +548,17 @@ console.log(stringOnlyArray);
 // marks (number | null)
 // Write a function that prints "Marks not available" if null.
 
-var student: {id:number, stdName:string, marks:(number | null)} ={
-    id : 2,
-    stdName : 'Daud shah',
-    marks : null
+var student: { id: number, stdName: string, marks: (number | null) } = {
+    id: 2,
+    stdName: 'Daud shah',
+    marks: null
 }
 
-function checkMarks(){
-    if(student.marks === null){
+function checkMarks() {
+    if (student.marks === null) {
         console.log('Marks not available')
     }
-    else{
+    else {
         console.log(student)
     }
 }
@@ -571,42 +571,42 @@ checkMarks();
 // price (number | "free")
 // Print different messages based on price type.
 
-function printProductDetails(product: {title:string, price:number | 'free'}){
+function printProductDetails(product: { title: string, price: number | 'free' }) {
     if (product.price === 'free') {
         console.log(`The product ${product.title} is free of cost.`)
     }
-    else{
+    else {
         console.log(`The product ${product.title} costs $ ${product.price}.`)
     }
 }
 
-printProductDetails({title:'Book', price: 'free'});
-printProductDetails({title:'Laptop', price: 999});
+printProductDetails({ title: 'Book', price: 'free' });
+printProductDetails({ title: 'Laptop', price: 999 });
 
 
-var arr5:string[] = ['Amir', 'shah', 'is', 'a', 'good'];
+var arr5: string[] = ['Amir', 'shah', 'is', 'a', 'good'];
 
 arr5.push('Developer');
 
 console.log(arr5);
 
 
-var arrofObjects: {id:number, name:string}[] = 
-[
-    {
-        id:1, 
-        name:'Amir shah'
-    },
+var arrofObjects: { id: number, name: string }[] =
+    [
+        {
+            id: 1,
+            name: 'Amir shah'
+        },
 
-    {
-        id:2,
-        name:'Sohail khan'
-    },
-    {
-        id:3,
-        name:'Daud shah'
-    }
-];
+        {
+            id: 2,
+            name: 'Sohail khan'
+        },
+        {
+            id: 3,
+            name: 'Daud shah'
+        }
+    ];
 
 for (const element of arrofObjects) {
     console.log(`ID: ${element.id}, Name: ${element.name}`);
@@ -621,8 +621,8 @@ for (const element of arrofObjects) {
 // console.log(`Last Element of array  ${lastElement}`);
 
 
-var fruits:string[] = ['mango ', 'banana', 'pineapple ', 'apple', 'grapes', 'ananas'];
-var lastEle = fruits[fruits.length -1 ];
+var fruits: string[] = ['mango ', 'banana', 'pineapple ', 'apple', 'grapes', 'ananas'];
+var lastEle = fruits[fruits.length - 1];
 console.log(lastEle);
 
 // Create a tuple that stores: id (number), username (string).
@@ -642,12 +642,12 @@ console.log(`User ID: ${userTuple[0]} and User name is ${userTuple[1]}`);
 // console.log(`Average is: ${average}`);
 
 
-function calculateAverage(arr:number[]): number{
-    const sum = arr.reduce((acc, currentValue) => acc + currentValue , 0);
+function calculateAverage(arr: number[]): number {
+    const sum = arr.reduce((acc, currentValue) => acc + currentValue, 0);
     return sum / arr.length;
 }
 
-var numbersArray: number[] = [40,20,80,90,50];
+var numbersArray: number[] = [40, 20, 80, 90, 50];
 var average = calculateAverage(numbersArray);
 console.log(`Average is : ${average}`);
 
@@ -672,7 +672,7 @@ if (typeof value === 'number') {
     value += 10;
     console.log(value);
 }
-else if (typeof value === 'string'){
+else if (typeof value === 'string') {
     value = value + '!';
     console.log(value);
 }
@@ -680,10 +680,10 @@ else if (typeof value === 'string'){
 var value1: number | string = 'hello how are you';
 
 if (typeof value1 === 'number') {
-     value1 = value1 +  10;
+    value1 = value1 + 10;
     console.log(value1);
 }
-else if (typeof value1 === 'string'){
+else if (typeof value1 === 'string') {
     value1 = value1 + '!';
     console.log(value1);
 }
@@ -692,7 +692,7 @@ else if (typeof value1 === 'string'){
 // Create a function that takes (string | number)[] and returns only strings.
 
 function getStrings(arr: (string | number)[]): string[] {
-    return arr.filter( (item ) => typeof item === 'string') as string[];
+    return arr.filter((item) => typeof item === 'string') as string[];
 }
 
 var mixedArr1: (string | number)[] = [10, 'amir', 20, 'shah', 30, 'khan'];
@@ -702,7 +702,7 @@ console.log(stringArr1);
 
 //Array in Typescript 
 
-var myNumArray: number[] = [60, 40 ,45, 43, 50];
+var myNumArray: number[] = [60, 40, 45, 43, 50];
 console.log(myNumArray);
 
 // var strArray1: string[] = ["Pakisatan", 'is a ', 'beautiful','country'];
@@ -728,19 +728,19 @@ for (const data of arrayofStrings) {
 
 
 // Readonly array 
-var readOnlyArray: ReadonlyArray<number> = [10,20,30,40,50];
+var readOnlyArray: ReadonlyArray<number> = [10, 20, 30, 40, 50];
 // readOnlyArray.push(60); // This will cause an error because it's a readonly array
 console.log(readOnlyArray);
 
 
 // Typescript tuple 
-var username: [number , string , boolean] = [1, 'amir shah', true];
+var username: [number, string, boolean] = [1, 'amir shah', true];
 
 
-var userData :{name:string , rollNo:number, isActive:boolean} = {
-    name:'Amir shah',
-    rollNo:439,
-    isActive:true
+var userData: { name: string, rollNo: number, isActive: boolean } = {
+    name: 'Amir shah',
+    rollNo: 439,
+    isActive: true
 }
 
 console.log(userData.name);
@@ -749,18 +749,18 @@ console.log(userData.isActive);
 
 // call object using keys 
 // Object.keys(userData).forEach((key)=>{
-    //     const value = userData[key];
-    //     console.log(`key: ${key}, value: ${value}`);
-    // });
-    
-    
-Object.keys(userData).forEach((key)=>{
+//     const value = userData[key];
+//     console.log(`key: ${key}, value: ${value}`);
+// });
+
+
+Object.keys(userData).forEach((key) => {
     const value = userData[key];
     console.log(`${key}: ${value}`);
 });
 
-    // call object using  values
-    
+// call object using  values
+
 //     Object.values(userData).forEach((value)=>{
 //     console.log(value);
 // });
@@ -778,7 +778,7 @@ Object.keys(userData).forEach((key)=>{
 var anyValue: any = 100;
 anyValue = 'Now I am a string';
 anyValue = true;
-anyValue = {name: 'Amir shah', age: 25};
+anyValue = { name: 'Amir shah', age: 25 };
 console.log(anyValue);
 
 
@@ -792,27 +792,27 @@ if (typeof unknownValue === 'string') {
 }
 // console.log(unknownValue);
 unknownValue = true;
-unknownValue = {name: 'Amir shah', age: 25};
+unknownValue = { name: 'Amir shah', age: 25 };
 console.log(unknownValue);
 
 
 // spread operator use in typescript for sum of numbers
-function sumofNumbers(a:number, b:number, ...c:number[]):number{
+function sumofNumbers(a: number, b: number, ...c: number[]): number {
     return a + b + c.reduce((acc, curr) => acc + curr, 0);
 }
 
-var resultSum = sumofNumbers(20,30,30,40,50);
+var resultSum = sumofNumbers(20, 30, 30, 40, 50);
 console.log(`Sum is : ${resultSum}`);
 
 
 
 // Example2 of spread operator 
-function sumofNumbers1(a,  ...b){
- const sum = a + b.reduce((acc, curr)=> acc + curr, 0);
- return sum;   
+function sumofNumbers1(a, ...b) {
+    const sum = a + b.reduce((acc, curr) => acc + curr, 0);
+    return sum;
 }
 
-var resultSum1 = sumofNumbers1(20,30,30,40,500,1200,3000);
+var resultSum1 = sumofNumbers1(20, 30, 30, 40, 500, 1200, 3000);
 console.log(`Sum is : ${resultSum1}`);
 
 
@@ -827,9 +827,9 @@ console.log(`Sum is : ${resultSum1}`);
 
 // function paramerters in Typescript 
 
-function totalPrice(item:number){
+function totalPrice(item: number) {
     var price = 20;
-    return  price * item;
+    return price * item;
 }
 
 
@@ -837,7 +837,7 @@ console.log(totalPrice(21));
 
 // Write a function add that takes two numbers and returns their sum.
 
-function addTwoNumbers(num1:number, num2:number){
+function addTwoNumbers(num1: number, num2: number) {
     return num1 + num2;
 }
 
@@ -847,7 +847,7 @@ console.log(result);
 // Write a function greet that takes a string name and returns:
 // Hello, <name>!
 
-function Greet(strName:string){
+function Greet(strName: string) {
     return 'Hello ' + strName;
 }
 
@@ -856,30 +856,30 @@ var output = Greet('Amir shah');
 console.log(output);
 
 
-function checkEven(){
-    var isEven:number = 20 ;
+function checkEven() {
+    var isEven: number = 20;
 
     if (typeof isEven === 'number') {
         return true;
     }
-    else{
+    else {
 
         return false;
     }
-    
+
 }
 
 console.log(checkEven());
 
 
-function square(numb1:number){
+function square(numb1: number) {
     return numb1 * numb1;
 }
 
 
 console.log(square(50));
 
-function multiply(a:number , b:number){
+function multiply(a: number, b: number) {
     return a * b;
 }
 
@@ -887,7 +887,7 @@ function multiply(a:number , b:number){
 console.log('The multiplication of a and b is = ' + multiply(2, 100002));
 
 
-function formatUser(name:string , age:number){
+function formatUser(name: string, age: number) {
     return `Name :  ${name}, age:  ${age}`
 }
 
@@ -897,19 +897,19 @@ console.log(userInfo);
 
 
 // Area of rectangle 
-function calculateArea(width:number, height:number){
-   var result = width * height;
-   console.log(result);
+function calculateArea(width: number, height: number) {
+    var result = width * height;
+    console.log(result);
 }
 
-calculateArea(40,20);
+calculateArea(40, 20);
 
 
-function isLongerThan(text:string, length:number){
-    if(text.length > length){
+function isLongerThan(text: string, length: number) {
+    if (text.length > length) {
         console.log('Text is longer than length');
     }
-    else{
+    else {
         console.log('Text is less than length';
     }
 }
@@ -918,8 +918,7 @@ function isLongerThan(text:string, length:number){
 isLongerThan('Amir', 5);
 
 
-function check(name)
-{
+function check(name) {
     return 'Hello ' + name;
 }
 
@@ -961,9 +960,63 @@ console.log(user1);
 
 
 var user2: User = {
-    id:2, 
-    name:'Sohail khan',
-    email:'example@gmail.com',
-    isActive:false
+    id: 2,
+    name: 'Sohail khan',
+    email: 'example@gmail.com',
+    isActive: false
 }
 console.log(user2);
+
+
+interface Product {
+    id: number;
+    name: string;
+    price: number;
+    description?: string;
+}
+
+var product1: Product = {
+    id: 1,
+    name: 'Laptop',
+    price: 999.99,
+    description: 'A high-performance laptop for work and gaming.'
+}
+
+console.log(product1);
+
+var product2: Product = {
+    id: 2,
+    name: 'Smartphone',
+    price: 499.99,
+    description: 'A sleek smartphone with a powerful camera and long battery life.'
+}
+console.log(product2);
+
+
+
+interface studentData {
+    id:number;
+    name:string;
+    fName: string;
+    address?:string;
+}
+
+
+var std1: studentData ={
+    id:1,
+    name:'Amir shah',
+    fName:'Sultan shah',
+    address:'Peshawar'
+}
+
+console.log(std1);
+
+var std2: studentData ={
+    id:2,
+    name:'Saif ullah',
+    fName:'Muhammad Jamal',
+    address:'Peshawar Pakistan'
+}
+
+console.log(std2);
+
