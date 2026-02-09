@@ -746,3 +746,182 @@ var userData :{name:string , rollNo:number, isActive:boolean} = {
 console.log(userData.name);
 console.log(userData.rollNo);
 console.log(userData.isActive);
+
+// call object using keys 
+// Object.keys(userData).forEach((key)=>{
+    //     const value = userData[key];
+    //     console.log(`key: ${key}, value: ${value}`);
+    // });
+    
+    
+Object.keys(userData).forEach((key)=>{
+    const value = userData[key];
+    console.log(`${key}: ${value}`);
+});
+
+    // call object using  values
+    
+//     Object.values(userData).forEach((value)=>{
+//     console.log(value);
+// });
+
+
+// Object iterate using for of loop 
+
+// for (const key in userData) {
+//     if (!Object.hasOwn(userData, key)) continue;
+//     const element = userData[key];
+//     console.log(`${key}: ${element}`);
+// }
+
+//Any in typescript
+var anyValue: any = 100;
+anyValue = 'Now I am a string';
+anyValue = true;
+anyValue = {name: 'Amir shah', age: 25};
+console.log(anyValue);
+
+
+// Unknown in Typescript
+var unknownValue: unknown = 100;
+
+console.log(typeof unknownValue);
+unknownValue = 'Now I am a string';
+if (typeof unknownValue === 'string') {
+    console.log(unknownValue.toUpperCase());
+}
+// console.log(unknownValue);
+unknownValue = true;
+unknownValue = {name: 'Amir shah', age: 25};
+console.log(unknownValue);
+
+
+// spread operator use in typescript for sum of numbers
+function sumofNumbers(a:number, b:number, ...c:number[]):number{
+    return a + b + c.reduce((acc, curr) => acc + curr, 0);
+}
+
+var resultSum = sumofNumbers(20,30,30,40,50);
+console.log(`Sum is : ${resultSum}`);
+
+
+
+// Example2 of spread operator 
+function sumofNumbers1(a,  ...b){
+ const sum = a + b.reduce((acc, curr)=> acc + curr, 0);
+ return sum;   
+}
+
+var resultSum1 = sumofNumbers1(20,30,30,40,500,1200,3000);
+console.log(`Sum is : ${resultSum1}`);
+
+
+// never in typescript
+// function throwError(message: string): never {
+//     throw new Error(message);
+// }
+// var newError = throwError('This is a critical error');
+// console.log(newError)
+
+
+
+// function paramerters in Typescript 
+
+function totalPrice(item:number){
+    var price = 20;
+    return  price * item;
+}
+
+
+console.log(totalPrice(21));
+
+// Write a function add that takes two numbers and returns their sum.
+
+function addTwoNumbers(num1:number, num2:number){
+    return num1 + num2;
+}
+
+var result = addTwoNumbers(50, 60);
+console.log(result);
+
+// Write a function greet that takes a string name and returns:
+// Hello, <name>!
+
+function Greet(strName:string){
+    return 'Hello ' + strName;
+}
+
+
+var output = Greet('Amir shah');
+console.log(output);
+
+
+function checkEven(){
+    var isEven:number = 20 ;
+
+    if (typeof isEven === 'number') {
+        return true;
+    }
+    else{
+
+        return false;
+    }
+    
+}
+
+console.log(checkEven());
+
+
+function square(numb1:number){
+    return numb1 * numb1;
+}
+
+
+console.log(square(50));
+
+function multiply(a:number , b:number){
+    return a * b;
+}
+
+
+console.log('The multiplication of a and b is = ' + multiply(2, 100002));
+
+
+function formatUser(name:string , age:number){
+    return `Name :  ${name}, age:  ${age}`
+}
+
+
+var userInfo = formatUser('Amir shah', 25);
+console.log(userInfo);
+
+
+// Area of rectangle 
+function calculateArea(width:number, height:number){
+   var result = width * height;
+   console.log(result);
+}
+
+calculateArea(40,20);
+
+
+function isLongerThan(text:string, length:number){
+    if(text.length > length){
+        console.log('Text is longer than length');
+    }
+    else{
+        console.log('Text is less than length';
+    }
+}
+
+
+isLongerThan('Amir', 5);
+
+
+function check(name)
+{
+    return 'Hello ' + name;
+}
+
+var result1 = check('Amir shah');
+console.log(result1);
