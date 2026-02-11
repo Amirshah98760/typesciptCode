@@ -631,15 +631,15 @@ function calculateArea(width, height) {
     console.log(result);
 }
 calculateArea(40, 20);
-function isLongerThan(text, length) {
-    if (text.length > length) {
-        console.log('Text is longer than length');
-    }
-    else {
-        console.log('Text is less than length');
-    }
-}
-isLongerThan('Amir', 5);
+// function isLongerThan(text: string, length: number) {
+//     if (text.length > length) {
+//         console.log('Text is longer than length');
+//     }
+//     else {
+//         console.log('Text is less than length';
+//     }
+// }
+// isLongerThan('Amir', 5);
 function check(name) {
     return 'Hello ' + name;
 }
@@ -679,11 +679,132 @@ var std1 = {
     fName: 'Sultan shah',
     address: 'Peshawar'
 };
-console.log(std1);
+// console.log(std1);
 var std2 = {
     id: 2,
     name: 'Saif ullah',
     fName: 'Muhammad Jamal',
     address: 'Peshawar Pakistan'
 };
-console.log(std2);
+var teacher1 = {
+    name: 'Sohail Khan',
+    age: 30,
+    Subject: 'Computer Science',
+    College: 'University of Peshawar'
+};
+var teacher2 = {
+    name: 'Daud shah',
+    age: 28,
+    Subject: 'Mathematics',
+    College: 'University of Agriculure Peshawar'
+};
+var Teacher3 = {
+    name: 'Aziz ullah',
+    age: 35,
+    Subject: 'Physics',
+    College: 'University of Engineering and Technology Peshawar'
+};
+for (var _e = 0, _f = [teacher1, teacher2, Teacher3]; _e < _f.length; _e++) {
+    var ele = _f[_e];
+    console.log(ele);
+}
+var obj3 = {
+    name: 'Amir shah',
+    age: 25
+};
+var user3 = {
+    name: 'Amir shah',
+    age: 35
+};
+console.log(user3);
+var user4 = {
+    name: 'Amir shah',
+    age: 25,
+    contact: 1234567890,
+    address: 'Peshawar Pakistan'
+};
+console.log(user4);
+// enum Status {
+//   Pending,
+//   Success,
+//   Failed
+// }
+// let current: Status = Status.Pending;
+// if (current === Status.Success) {
+//   console.log("Done!");
+// }
+var Role;
+(function (Role) {
+    Role["Admin"] = "Admin";
+    Role["User"] = "User";
+    Role["Guest"] = "Guest";
+})(Role || (Role = {}));
+function checkrole(role) {
+    if (role === Role.Admin) {
+        console.log("Give full access ");
+    }
+}
+var whoType;
+(function (whoType) {
+    whoType["Student"] = "Student";
+    whoType["Teacher"] = "Teacher ";
+    whoType["Management"] = "Management";
+    whoType["labStaff"] = "Lab staff";
+})(whoType || (whoType = {}));
+function checkType(type) {
+    if (type === whoType.Student) {
+        console.log("This is a student");
+    }
+    else if (type === whoType.Teacher) {
+        console.log("This is a teacher");
+    }
+    else if (type === whoType.Management) {
+        console.log("This is a management staff");
+    }
+    else if (type === whoType.labStaff) {
+        console.log("This is a lab staff");
+    }
+}
+checkType(whoType.Student);
+checkType(whoType.Teacher);
+checkType(whoType.Management);
+checkType(whoType.labStaff);
+// enum FetchState {
+//     Idle ,
+//     Loading , 
+//     Success, 
+//     Error 
+// }
+// switch (state){
+//     case FetchState.Loading;
+//     return <Spinner />
+//     case FetchState.Success;
+//     return <Data />
+//     case FetchState.Error;
+//     return <Error />
+// }
+(function (Role) {
+    Role[Role["Admin"] = 0] = "Admin";
+    Role[Role["manager"] = 1] = "manager";
+    Role[Role["qa"] = 2] = "qa";
+    Role[Role["Developer"] = 3] = "Developer";
+    Role[Role["User"] = 4] = "User";
+})(Role || (Role = {}));
+function checkRole(role) {
+    if (role === Role.Admin) {
+        console.log("Give full access ");
+    }
+    else if (role === Role.manager) {
+        console.log("Give access to manage team ");
+    }
+    else if (role === Role.qa) {
+        console.log("Give access to test the application ");
+    }
+    else if (role === Role.Developer) {
+        console.log("Give access to develop the application ");
+    }
+    else if (role === Role.User) {
+        console.log("Give access to use the application ");
+    }
+}
+checkRole(Role.Admin);

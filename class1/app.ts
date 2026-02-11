@@ -905,17 +905,17 @@ function calculateArea(width: number, height: number) {
 calculateArea(40, 20);
 
 
-function isLongerThan(text: string, length: number) {
-    if (text.length > length) {
-        console.log('Text is longer than length');
-    }
-    else {
-        console.log('Text is less than length';
-    }
-}
+// function isLongerThan(text: string, length: number) {
+//     if (text.length > length) {
+//         console.log('Text is longer than length');
+//     }
+//     else {
+//         console.log('Text is less than length';
+//     }
+// }
 
 
-isLongerThan('Amir', 5);
+// isLongerThan('Amir', 5);
 
 
 function check(name) {
@@ -1009,7 +1009,7 @@ var std1: studentData ={
     address:'Peshawar'
 }
 
-console.log(std1);
+// console.log(std1);
 
 var std2: studentData ={
     id:2,
@@ -1018,5 +1018,211 @@ var std2: studentData ={
     address:'Peshawar Pakistan'
 }
 
-console.log(std2);
+// for (const element of [std1, std2]) {
+//     console.log(element);
+// }
+
+
+
+interface Teacher {
+    name:string;
+    age:number;
+    Subject:string;
+    College:string;
+}
+
+var teacher1: Teacher = {
+    name:'Sohail Khan',
+    age: 30,
+    Subject:'Computer Science',
+    College:'University of Peshawar'
+}
+
+var teacher2: Teacher = {
+    name:'Daud shah',
+    age: 28,
+    Subject:'Mathematics',
+    College:'University of Agriculure Peshawar'
+}
+
+var Teacher3: Teacher = {
+    name:'Aziz ullah',
+    age: 35,
+    Subject:'Physics',
+    College:'University of Engineering and Technology Peshawar'
+}
+
+
+for (const ele of [teacher1, teacher2, Teacher3]) {
+     console.log(ele)
+}
+
+
+type a = {
+    name:string;
+}
+
+type b = {
+    age:number;
+}
+
+type c = a & b;
+
+var obj3: c = {
+    name:'Amir shah',
+    age: 25
+}
+
+// console.log(obj3);
+
+
+
+interface user {
+    name: string;
+}
+
+interface user {
+    age: number;
+}
+
+var user3: user = {
+    name:'Amir shah',
+    age: 35
+}
+
+console.log(user3);
+
+
+
+// type User = {
+//   name: string;
+// };
+
+// // give Error because we cannot declare same type with same name in typescript
+// type User = {
+//   age: number;
+// };
+
+
+interface user1 {
+    name: string;
+    age: number;
+    contact: number;
+    address?: string;
+}
+
+
+var user4 : user1 = {
+    name:'Amir shah',
+    age: 25,
+    contact: 1234567890,
+    address:'Peshawar Pakistan'
+}
+
+console.log(user4);
+
+
+// enum Status {
+//   Pending,
+//   Success,
+//   Failed
+// }
+
+// let current: Status = Status.Pending;
+
+// if (current === Status.Success) {
+//   console.log("Done!");
+// }
+
+
+enum Role {
+    Admin = 'Admin',
+    User = 'User',
+    Guest = 'Guest'
+}
+
+
+function checkrole(role: Role){
+    if (role === Role.Admin){
+        console.log(`Give full access `);
+        }
+}
+
+
+
+enum whoType {
+    Student = 'Student',
+    Teacher = 'Teacher ',
+    Management = 'Management',
+    labStaff = 'Lab staff'
+}
+
+function checkType(type: whoType) {
+    if (type === whoType.Student) {
+        console.log("This is a student");
+    }
+    else if (type === whoType.Teacher) {
+        console.log("This is a teacher");
+    }
+    else if (type === whoType.Management) {
+        console.log("This is a management staff");
+    }
+    else if (type === whoType.labStaff) {
+        console.log("This is a lab staff");
+    }
+}
+checkType(whoType.Student);
+checkType(whoType.Teacher);
+checkType(whoType.Management);
+checkType(whoType.labStaff);
+
+
+
+// enum FetchState {
+//     Idle ,
+//     Loading , 
+//     Success, 
+//     Error 
+// }
+
+// switch (state){
+//     case FetchState.Loading;
+//     return <Spinner />
+
+//     case FetchState.Success;
+//     return <Data />
+
+//     case FetchState.Error;
+//     return <Error />
+// }
+
+enum Role {
+    Admin ,
+    manager, 
+    qa ,
+    Developer,
+    User
+}
+
+function checkRole(role: Role){
+    if (role === Role.Admin){
+        console.log(`Give full access `);
+    }
+    else if (role === Role.manager) {
+        console.log(`Give access to manage team `);
+    }
+    else if (role === Role.qa) {
+        console.log(`Give access to test the application `);
+    }
+    else if (role === Role.Developer) {
+        console.log(`Give access to develop the application `);
+    }
+    else if (role === Role.User) {
+        console.log(`Give access to use the application `);
+    }
+
+}
+
+checkRole(Role.Admin);
+
 
