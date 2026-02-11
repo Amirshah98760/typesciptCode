@@ -50,3 +50,43 @@ class Person {
 
 var person1 = new Person('amir shah', 25);
 console.log(`Person name is :${person1.name}, and person age is : ${person1.age}`);
+
+
+// Create a class Car with:
+// brand
+// year
+
+// class Car {
+//     brand: string
+//     year: number
+//     // Add a method that returns how old the car is.
+//   constructor(brand:string, year:number){
+//     this.brand = brand;
+//     this.year = year;
+//   }
+
+//   getCarAge(): number {
+//     const currentYear = new Date().getFullYear();
+//     return currentYear - this.year;
+//   }
+// }
+
+// var car1 = new Car('Toyota', 2010);
+// console.log(`Car brand is : ${car1.brand}, and car age is : ${car1.getCarAge()} years`);
+
+
+// Make a class Student with a constructor that takes name and grade.
+
+class Student {
+    name: string
+    grade: string 
+
+    constructor(name: string , grade: string){
+        this.name = name ;
+        this.grade = grade;
+    }
+}
+
+
+var student1 = new Student('khan', 'A');
+console.log(student1);
